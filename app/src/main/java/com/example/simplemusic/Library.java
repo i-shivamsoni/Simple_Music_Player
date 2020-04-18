@@ -1,6 +1,9 @@
 package com.example.simplemusic;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +17,7 @@ public class Library extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_library);
 
-
+        Button playBtn = findViewById(R.id.btn_play);
         ArrayList<SongDetails> songs = new ArrayList<SongDetails>();
         songs.add(new SongDetails("Without Me", "Hasley", "Without Me"));
         songs.add(new SongDetails("Darkside", "Alan Walker & more", "Darkside"));
@@ -38,5 +41,16 @@ public class Library extends AppCompatActivity {
 
         assert listView != null;
         listView.setAdapter(adapter);
+
+        playBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent playIntent = new Intent(Library.this, CurrentPlaying.class);
+
+                // Start the new activity
+                startActivity(playIntent);
+            }
+        });
+
     }
 }
