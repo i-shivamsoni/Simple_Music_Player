@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Simple Music</string>
+    <string name="songs">Songs</string>
+    <string name="play">Play Music</string>
+    <string name="Library">Library</string>
+    <string name="Playbutton">Play button as album art</string>
+</resources>
