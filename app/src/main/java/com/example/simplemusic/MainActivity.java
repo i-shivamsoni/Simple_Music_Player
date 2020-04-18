@@ -14,12 +14,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // ImageView Lib = findViewById(R.id.img_lib);
+
         Button libbtn = findViewById(R.id.btn_lib);
         libbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create a new intent to open the {@link NumbersActivity}
+
                 Intent libIntent = new Intent(MainActivity.this, Library.class);
 
                 // Start the new activity
